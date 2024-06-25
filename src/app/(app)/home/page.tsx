@@ -4,9 +4,9 @@ import React from "react";
 
 function page() {
   return (
-    <div className="h-[100vh] w-[100vw]">
-      <div className="h-[100%] w-[100vw] p-2 md:flex">
-        <div className="md:w-1/2 h-[100%]">
+    <div className="h-[100vh] w-[100vw] bg-fields">
+      <div className="h-[100%] w-[100vw] md:p-5 md:flex glass">
+        <div className="md:w-1/2 h-[100%] bg-white rounded-l-2xl overflow-hidden">
           <div className="md:pr-2 md:mt-5">
             <Navbar />
           </div>
@@ -14,7 +14,7 @@ function page() {
             <Main />
           </div>
         </div>
-        <div className="md:w-1/2 bg-white h-[100%] p-2">
+        <div className="md:w-1/2 bg-white h-[100%] p-2 rounded-r-2xl">
             <div className=" bg-fields bg-center bg-cover h-[100%] rounded-2xl">
 
             </div>
