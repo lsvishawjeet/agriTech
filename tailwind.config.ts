@@ -55,6 +55,7 @@ const config = {
       },
       backgroundImage: {
         'fields': "url('/image1.jpeg')",
+        'weblogo1': "url('/logos/l2.jpeg')",
       },
       borderRadius: {
         lg: "var(--radius)",
