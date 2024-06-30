@@ -59,7 +59,7 @@ const SendCropData = () => {
       
       const response = await axios({
         method: "post",
-        url: "http://13.60.18.175/predict",
+        url: "//13.60.18.175/predict",
         data: values,
       });
   
@@ -71,7 +71,7 @@ const SendCropData = () => {
       sessionStorage.setItem("enteredValues", JSON.stringify(values));
       sessionStorage.setItem(
         "graphURL",
-        `http://13.60.18.175/${response.data.image_url}`
+        `//13.60.18.175/${response.data.image_url}`
       );
       router.push(`/home/predict/result`);
     } catch (error: any | AxiosError) {
