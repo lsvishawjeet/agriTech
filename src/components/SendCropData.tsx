@@ -14,9 +14,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast"
+
 
 const formSchema = z.object({
   Nitrogen: z.string(),
@@ -46,8 +48,9 @@ const SendCropData = () => {
   const [crop, setCrop] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [graphUrl, setGraphUrl] = useState<string>("")
-  const router = useRouter()
+  const [graphUrl, setGraphUrl] = useState<string>("");
+  const router = useRouter();
+  const { toast } = useToast()
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -59,13 +62,35 @@ const SendCropData = () => {
       });
       setSuccess(true);
       setCrop(response.data.predicted_crop);
-      setGraphUrl(response.data.image_url)
-    //   router.push(`/home/predict/${JSON.stringify(values)}/${response.data.predicted_crop}`)
-    sessionStorage.setItem('predicted_crop', response.data.predicted_crop)
-    sessionStorage.setItem('enteredValues', JSON.stringify(values))
-    sessionStorage.setItem('graphURL', `http://13.60.18.175/${response.data.image_url}`)
-    router.push(`/home/predict/result`)
-    } catch (error) {
+      setGraphUrl(response.data.image_url);
+      //   router.push(`/home/predict/${JSON.stringify(values)}/${response.data.predicted_crop}`)
+      sessionStorage.setItem("predicted_crop", response.data.predicted_crop);
+      sessionStorage.setItem("enteredValues", JSON.stringify(values));
+      sessionStorage.setItem(
+        "graphURL",
+        `http://13.60.18.175/${response.data.image_url}`
+      );
+      router.push(`/home/predict/result`);
+    } catch (error: any | AxiosError) {
+      if(error.response){
+        toast({
+          title: `${error.response.data}`,
+          description: `${error.response.headers}`,
+          variant: "destructive"
+        })
+      }
+      else if(error.request){
+        toast({
+          title: `${error.request}`,
+          variant: "destructive"
+        })
+      }
+      else{
+        toast({
+          title: `${error.message}`,
+          variant: "destructive"
+        })
+      }
       console.error("Error predicting Error");
       setSuccess(false);
     } finally {
@@ -190,12 +215,10 @@ const SendCropData = () => {
             </form>
           </Form>
         </div>
-        
       </div>
-      
     </div>
   );
-}
+};
 export default SendCropData;
 
 {
