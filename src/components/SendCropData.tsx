@@ -81,7 +81,7 @@ const SendCropData = () => {
       }
       else if(error.request){
         toast({
-          title: `${error.request}`,
+          title: `${JSON.stringify(error.request)}`,
           variant: "destructive"
         })
       }
