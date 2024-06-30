@@ -90,6 +90,7 @@ function page() {
           <div className="flex justify-center align-middle items-center h-auto bg-white">
             <Suspense fallback={<p>Loading....</p>}>
               <div className={" p-5 w-[100%]"}>
+                <h1 className="text-3xl font-semibold mb-2">{predictedCrop}</h1>
                 <AIinsights />
                 <div className=" rounded-md m-2 ">
                   <div className="glass p-3 h-56 rounded-md">
@@ -102,13 +103,13 @@ function page() {
           </div>
         </div>
         <div className="md:w-1/2 bg-white h-[100%] p-2 md:rounded-r-2xl bg">
-          <div className=" bg-weblogo1 bg-center bg-cover h-[100%] rounded-2xl overflow-hidden">
+          <div className=" md:bg-weblogo1 bg-center bg-cover h-[100%] rounded-2xl overflow-hidden">
             <div className="flex justify-center items-center h-[100%] overflow-scroll no-scrollbar">
               {/* <Suspense fallback={<p>Loading...</p>}> */}
               <div className="relative  h-[100%]">
                 <div
                   className={
-                    "flex sticky top-5 mt-5 mb-5 glass m-3 md:m-4 rounded-lg z-10"
+                    "md:flex md:sticky hidden top-5 mt-5 mb-5 glass m-3 md:m-4 rounded-lg z-10"
                   }
                 >
                   <p className="p-3">
@@ -125,6 +126,7 @@ function page() {
                     />
                   )}
                 </div>
+                {/* <button>Explore more crops data</button> */}
               </div>
               {/* </Suspense> */}
             </div>

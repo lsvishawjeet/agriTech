@@ -110,8 +110,8 @@ const SendCropData = () => {
   }
   
   return (
-    <div className="flex flex-col  items-center">
-      <div className="md:w-[80%]  p-5 rounded-2xl glass m-5">
+    <div className="flex flex-col items-center">
+      <div className="md:w-[80%] p-5 rounded-2xl glass md:m-5">
         <div className={success ? "hidden" : ""}>
           <div className="mt-3 mb-6">
             <h1 className="text-2xl font-semibold text-center">
