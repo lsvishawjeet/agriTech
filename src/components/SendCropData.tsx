@@ -59,7 +59,7 @@ const SendCropData = () => {
       
       const response = await axios({
         method: "post",
-        url: "//13.60.18.175/predict",
+        url: "https://agritechbackendflask.onrender.com/predict",
         data: values,
       });
   
@@ -71,7 +71,7 @@ const SendCropData = () => {
       sessionStorage.setItem("enteredValues", JSON.stringify(values));
       sessionStorage.setItem(
         "graphURL",
-        `//13.60.18.175/${response.data.image_url}`
+        `https://agritechbackendflask.onrender.com/${response.data.image_url}`
       );
       router.push(`/home/predict/result`);
     } catch (error: any | AxiosError) {
