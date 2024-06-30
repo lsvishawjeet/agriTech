@@ -63,7 +63,6 @@ const SendCropData = () => {
       setSuccess(true);
       setCrop(response.data.predicted_crop);
       setGraphUrl(response.data.image_url);
-      //   router.push(`/home/predict/${JSON.stringify(values)}/${response.data.predicted_crop}`)
       sessionStorage.setItem("predicted_crop", response.data.predicted_crop);
       sessionStorage.setItem("enteredValues", JSON.stringify(values));
       sessionStorage.setItem(
@@ -72,26 +71,33 @@ const SendCropData = () => {
       );
       router.push(`/home/predict/result`);
     } catch (error: any | AxiosError) {
-      if(error.response){
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          toast({
+            title: "Error",
+            description: error.response.data.message || "An error occurred.",
+            variant: "destructive",
+          });
+        } else if (error.request) {
+          toast({
+            title: "Error",
+            description: "No response from server. Please try again later.",
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Error",
+            description: error.message,
+            variant: "destructive",
+          });
+        }
+      } else {
         toast({
-          title: `${error.response.data}`,
-          description: `${error.response.headers}`,
-          variant: "destructive"
-        })
+          title: "Error",
+          description: "An unexpected error occurred.",
+          variant: "destructive",
+        });
       }
-      else if(error.request){
-        toast({
-          title: `${JSON.stringify(error.request)}`,
-          variant: "destructive"
-        })
-      }
-      else{
-        toast({
-          title: `${error.message}`,
-          variant: "destructive"
-        })
-      }
-      console.error("Error predicting Error");
       setSuccess(false);
     } finally {
       setIsProcessing(false);
