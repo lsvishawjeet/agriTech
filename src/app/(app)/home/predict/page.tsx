@@ -1,4 +1,3 @@
-"use client";
 import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
 import dynamic from 'next/dynamic';
