@@ -36,7 +36,6 @@ function page() {
       const graph = sessionStorage.getItem("graphURL");
       if (data) {
         setPredictedCrop(data);
-        // setImageUrl(`http://localhost:5000${data.image_url}`);
       }
       if (enteredValues) {
         setValues(JSON.parse(enteredValues) as passedData);
