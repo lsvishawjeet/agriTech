@@ -14,7 +14,6 @@ function AIinsights() {
   //   const md = markdownit();
   const [message, setMessage] = useState<string>("");
   const [isGetting, setIsGetting] = useState(false);
-  const [valuesEntered, setEnteredValues] = useState("")
 
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
@@ -30,14 +29,10 @@ function AIinsights() {
     responseMimeType: "text/plain",
   };
 
-
-  useEffect(()=>{
-    const enteredValues: string | any =
-      sessionStorage.getItem("enteredValues") +
-      " " +
-      `Predicted Crop: ${sessionStorage.getItem("predicted_crop")}`;
-      setEnteredValues(enteredValues)
-  },[])
+  const enteredValues: string | any =
+    sessionStorage.getItem("enteredValues") +
+    " " +
+    `Predicted Crop: ${sessionStorage.getItem("predicted_crop")}`;
 
 
   async function run() {
@@ -47,7 +42,7 @@ function AIinsights() {
             generationConfig,
             history: [],
           });
-          const result = await chatSession.sendMessage(valuesEntered);
+          const result = await chatSession.sendMessage(enteredValues);
           setMessage(result.response.text());
           console.log(result.response.text());
     } catch (error) {

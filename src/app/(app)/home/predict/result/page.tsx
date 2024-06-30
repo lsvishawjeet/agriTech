@@ -8,7 +8,7 @@ import { Interface } from "readline";
 import { string } from "zod";
 import dynamic from "next/dynamic";
 import "chart.js/auto";
-import AIinsights from "@/components/AIinsights";
+const AIinsights = dynamic(() => import('@/components/AIinsights'), { ssr: false });
 const Bar = dynamic(() => import("react-chartjs-2").then((mod) => mod.Bar), {
   ssr: false,
 });
