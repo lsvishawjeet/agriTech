@@ -1,6 +1,5 @@
 import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
-import { SendCropData } from "@/components/SendCropData";
 import React from "react";
 
 function page() {
