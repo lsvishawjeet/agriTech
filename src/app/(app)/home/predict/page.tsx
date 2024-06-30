@@ -12,12 +12,13 @@ function page() {
             <Navbar />
           </div>
           <div className="flex justify-center align-middle items-center h-auto bg-white">
-            <Main disabled = {false}/>
+            <Main disabled = {true}/>
           </div>
         </div>
         <div className="md:w-1/2 bg-white h-[100%] p-2 md:rounded-r-2xl">
             <div className=" bg-weblogo1 bg-center bg-cover h-[100%] rounded-2xl">
-              <div className="flex justify-center items-center h-[100%]">
+              <div className="flex justify-center items-center h-[100%] glass rounded-2xl">
+                <SendCropData/>
               </div>
             </div>
         </div>

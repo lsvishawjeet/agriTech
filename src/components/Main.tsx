@@ -1,11 +1,14 @@
 'use client'
 import React from 'react'
 import { Button } from "@/components/ui/button"
+import { useRouter } from 'next/navigation'
 
 
-function Main() {
+
+function Main({disabled}:any) {
+  const route = useRouter()
     function clicked(){
-        console.log("hi")
+      route.push("/home/predict")
     }
   return (
     <div className='md:m-9 ml-5 mr-5 flex flex-col  '>
@@ -21,8 +24,8 @@ function Main() {
         <span className='text-sm md:text-sm'>Enter details of your soil and weather, and find best suitable crop for farming. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, accusamus!</span>
       </div>
       <div className='mt-10'>
-        <Button onClick={clicked} className='p-3 pr-14 pl-14 text-black border-2 border-black rounded-3xl font-semibold bg-white hover:text-white'>Try Now</Button>
-        <span className='pt-3 pb-3 pl-4 pr-4 bg-black text-white rounded-[100%]'>{"->"}</span>
+        <Button onClick={clicked} className={ disabled ? "hidden" : 'p-3 pr-14 pl-14 text-black border-2 border-black rounded-3xl font-semibold bg-white hover:text-white'}>Try Now</Button>
+        <span className={disabled ? "hidden":'pt-3 pb-3 pl-4 pr-4 bg-black text-white rounded-[100%]'}>{"->"}</span>
       </div>
     </div>
   )

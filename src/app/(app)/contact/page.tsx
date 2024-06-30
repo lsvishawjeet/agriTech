@@ -12,7 +12,7 @@ function page() {
             <Navbar />
           </div>
           <div className="flex justify-center align-middle items-center h-auto bg-white">
-            <Main disabled = {false}/>
+            
           </div>
         </div>
         <div className="md:w-1/2 bg-white h-[100%] p-2 md:rounded-r-2xl">
