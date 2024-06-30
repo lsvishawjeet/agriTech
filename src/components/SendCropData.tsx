@@ -55,11 +55,15 @@ const SendCropData = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsProcessing(true);
+      console.log("Submitting form with values:", values);
+      
       const response = await axios({
         method: "post",
         url: "http://13.60.18.175/predict",
         data: values,
       });
+  
+      console.log("Received response:", response.data);
       setSuccess(true);
       setCrop(response.data.predicted_crop);
       setGraphUrl(response.data.image_url);
@@ -71,6 +75,7 @@ const SendCropData = () => {
       );
       router.push(`/home/predict/result`);
     } catch (error: any | AxiosError) {
+      console.error("Error during form submission:", error);
       if (axios.isAxiosError(error)) {
         if (error.response) {
           toast({
@@ -103,6 +108,7 @@ const SendCropData = () => {
       setIsProcessing(false);
     }
   }
+  
   return (
     <div className="flex flex-col  items-center">
       <div className="md:w-[80%]  p-5 rounded-2xl glass m-5">
