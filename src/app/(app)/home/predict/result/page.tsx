@@ -1,7 +1,7 @@
 "use client";
 import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
-import { SendCropData } from "@/components/SendCropData";
+import SendCropData  from "@/components/SendCropData";
 import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
 import { Interface } from "readline";

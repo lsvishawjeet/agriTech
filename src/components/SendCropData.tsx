@@ -28,7 +28,7 @@ const formSchema = z.object({
   Rainfall: z.string(),
 });
 
-export function SendCropData() {
+const SendCropData = () => {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -196,6 +196,7 @@ export function SendCropData() {
     </div>
   );
 }
+export default SendCropData;
 
 {
   /* <Button disabled>
