@@ -1,11 +1,7 @@
 "use client";
-import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
-import SendCropData  from "@/components/SendCropData";
 import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
-import { Interface } from "readline";
-import { string } from "zod";
 import dynamic from "next/dynamic";
 import "chart.js/auto";
 const AIinsights = dynamic(() => import('@/components/AIinsights'), { ssr: false });
