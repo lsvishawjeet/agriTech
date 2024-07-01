@@ -1,8 +1,23 @@
+'use client'
 import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { useEffect } from "react";
+import axios, { AxiosError } from "axios";
 
 function page() {
+  useEffect(()=>{
+    async function wakeUpServer() {
+      try {
+        const response = await axios({
+          method: "get",
+          url: "https://agritechbackendflask.onrender.com/",
+        });   
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    wakeUpServer()
+  },[])
   return (
     <div className="h-[100vh] w-[100vw] bg-weblogo1">
       <div className="h-[100%] w-[100vw] md:p-5 md:flex glass">
