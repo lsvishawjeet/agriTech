@@ -18,7 +18,7 @@ function AIinsights() {
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction:
-      "This website asks farmer about their soil details and weather details. These details are: Nitrogen, Phosphorus, Potassium, Temperature, Humidity, pH_Value, Rainfall. Then based on those details, it give best suitable crop prediction according to conditions. Website uses its own ml model and predicting crops. Now, you will get the user entered values and predicted suitable crop name from website, you will be providing more details about that particular crop, Your response should include: Why that crop suits most with those conditions. What are the improvements farmer can make by adding ingredients to soil, and what ingredients should be added to soil to increase the production of that crop. Which ingridient can become headache while growing that crop.",
+      "This website asks farmer about their soil details and weather details. These details are: Nitrogen (kg/ha), Phosphorus (kg/ha), Potassium (kg/ha), Temperature (Celsius), Humidity (percentage), pH_Value, Rainfall (mm). Then based on those details, it give best suitable crop prediction according to conditions. Website uses its own ml model and predicting crops. Now, you will get the user entered values and predicted suitable crop name from website, you will be providing more details about that particular crop, Your response should include: Why that crop suits most with those conditions. What are the improvements farmer can make by adding ingredients to soil, and what ingredients should be added to soil to increase the production of that crop. Which ingridient can become headache while growing that crop.",
   });
 
   const generationConfig = {

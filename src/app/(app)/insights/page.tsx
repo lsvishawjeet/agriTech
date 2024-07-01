@@ -9,8 +9,8 @@ function page() {
         <div className="h-[100%] w-[100%] bg-white md:rounded-2xl overflow-scroll  no-scrollbar">
           <div className="md:pr-2 md:mt-5 sticky top-0">
             <Navbar />
-          <div className="flex justify-center align-middle items-center h-auto bg-white">
-            <h1 className="text-xl p-3">
+          <div className="flex flex-wrap justify-center align-middle items-center h-auto bg-white">
+            <p className="text-xl p-3">
               Explore all the useful insights generated from{" "}
               <a
                 href="https://www.kaggle.com/datasets/aksahaha/crop-recommendation/"
@@ -20,8 +20,8 @@ function page() {
                 crop recommendation
               </a>{" "}
               dataset:
-            </h1>
-            <p className="text-sm">please wait this usually take {"<"} min</p>
+            <span className="text-sm pl-2 font-light">please wait this usually take {"<"} min</span>
+            </p>
           </div>
           </div>
           <div className="flex flex-wrap justify-center space-y-5 p-3">

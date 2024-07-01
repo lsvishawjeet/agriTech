@@ -129,7 +129,7 @@ const SendCropData = () => {
                 name="Nitrogen"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nitrogen</FormLabel>
+                    <FormLabel>Nitrogen (kg/ha)</FormLabel>
                     <FormControl>
                       <Input placeholder="80" {...field} />
                     </FormControl>
@@ -142,7 +142,7 @@ const SendCropData = () => {
                 name="Phosphorus"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phosphorus</FormLabel>
+                    <FormLabel>Phosphorus (kg/ha)</FormLabel>
                     <FormControl>
                       <Input placeholder="40" {...field} />
                     </FormControl>
@@ -155,7 +155,7 @@ const SendCropData = () => {
                 name="Potassium"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Potassium</FormLabel>
+                    <FormLabel>Potassium (kg/ha)</FormLabel>
                     <FormControl>
                       <Input placeholder="40" {...field} />
                     </FormControl>
@@ -168,7 +168,7 @@ const SendCropData = () => {
                 name="Temperature"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Temperature</FormLabel>
+                    <FormLabel>Temperature (Celsius)</FormLabel>
                     <FormControl>
                       <Input placeholder="30" {...field} />
                     </FormControl>
@@ -181,7 +181,7 @@ const SendCropData = () => {
                 name="Humidity"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Humidity</FormLabel>
+                    <FormLabel>Humidity (percentage)</FormLabel>
                     <FormControl>
                       <Input placeholder="82" {...field} />
                     </FormControl>
@@ -207,7 +207,7 @@ const SendCropData = () => {
                 name="Rainfall"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Rainfall</FormLabel>
+                    <FormLabel>Rainfall (mm)</FormLabel>
                     <FormControl>
                       <Input placeholder="200" {...field} />
                     </FormControl>
