@@ -226,6 +226,7 @@ const SendCropData = () => {
               </div>
             </form>
           </Form>
+          {isProcessing ? <><p className="text-center font-light">Please wait... this usually takes a minute</p></>:<></>}
         </div>
       </div>
     </div>

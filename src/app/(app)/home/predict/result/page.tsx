@@ -4,7 +4,9 @@ import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import "chart.js/auto";
-const AIinsights = dynamic(() => import('@/components/AIinsights'), { ssr: false });
+const AIinsights = dynamic(() => import("@/components/AIinsights"), {
+  ssr: false,
+});
 const Bar = dynamic(() => import("react-chartjs-2").then((mod) => mod.Bar), {
   ssr: false,
 });
@@ -41,9 +43,9 @@ function page() {
       }
     };
     getData();
-    console.log(`values: ${values}`)
+    console.log(`values: ${values}`);
   }, []);
-  
+
   const data = {
     labels: ["N2", "P4", "K", "T", "H", "pH", "R"],
     datasets: [
@@ -117,7 +119,7 @@ function page() {
                     <span className="font-semibold">{predictedCrop}</span>
                   </p>
                 </div>
-                <div className="p-3 overflow-hidden rounded-lg glass m-3 md:m-4" >
+                <div className="p-3 overflow-hidden rounded-lg glass m-3 md:m-4">
                   {graphUrl && (
                     <img
                       className="rounded-xl bg-blend-multiply"
@@ -126,8 +128,13 @@ function page() {
                     />
                   )}
                 </div>
-                {/* <button>Explore more crops data</button> */}
-              </div>
+                  <a
+                    href="/insights"
+                    className=" text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >
+                    <p className="text-end px-4 text-sm font-light"><span className="rounded-md glass p-2">Explore requirements of other crops</span></p>
+                  </a>
+                </div>
               {/* </Suspense> */}
             </div>
           </div>
