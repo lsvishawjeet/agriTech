@@ -20,13 +20,14 @@ function page() {
                   crop recommendation
                 </a>{" "}
                 dataset:
-                <span className="text-sm pl-2 font-light">
-                  please wait this usually take {"<"} min
-                </span>
+                
               </p>
             </div>
           </div>
           <div className="flex flex-wrap justify-center space-y-5 p-3">
+          <span className="text-sm pl-2 font-light">
+                  please wait this usually take {"<"} min
+                </span>
             <img
               className="rounded-xl bg-blend-multiply"
               src={`https://agritechbackendflask.onrender.com/insights/cropdistributiongraph`}
