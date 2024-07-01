@@ -19,9 +19,14 @@ function page() {
                 <strong>Team Name:</strong>  <p className="pl-3">Bytesmiths</p><br/>
                 <strong>Problem by:</strong>  <p className="pl-3">Intel</p><br/>
                   <strong>Description:</strong> <p className="pl-3">This project focuses on data visualization and insights generation. 
-                  We have chosen a crop prediction dataset from Kaggle, trained a model on it, and designed a system 
+                  We have chosen a <a
+                href="https://www.kaggle.com/datasets/aksahaha/crop-recommendation/"
+                target="_blank"
+                className="  md:hover:bg-transparent md:border-0 text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                crop recommendation
+              </a>{" "} dataset from Kaggle, trained a model on it, and designed a system 
                   where users input soil and weather values. The model then predicts the best suitable crop for the given conditions.</p><br/>
-                
               </div>
             </div>
           </div>
