@@ -31,7 +31,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 bg-white h-[100%] p-2 md:rounded-r-2xl">
+        <div className="md:w-1/2 bg-white h-[100%] p-2 md:rounded-r-2xl md:flex md:flex-col hidden">
           <div className="bg-weblogo1 bg-center bg-cover h-[100%] rounded-2xl">
             <div className="flex justify-center items-center h-[100%]">
             </div>
