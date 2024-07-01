@@ -25,7 +25,7 @@ function Main({disabled}:any) {
       </div>
       <div className='mt-10'>
         <Button onClick={clicked} className={ disabled ? "hidden" : 'p-3 pr-14 pl-14 text-black border-2 border-black rounded-3xl font-semibold bg-white hover:text-white'}>Try Now</Button>
-        <span className={disabled ? "hidden":'pt-3 pb-3 pl-4 pr-4 bg-black text-white rounded-[100%]'}>{"->"}</span>
+        <button onClick={clicked}><span className={disabled ? "hidden":'pt-3 pb-3 pl-4 pr-4 bg-gray-900 hover:bg-white text-white hover:text-black hover:border-black border-2 rounded-[100%]'}>{"->"}</span></button>
       </div>
     </div>
   )

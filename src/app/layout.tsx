@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Crop AI",
+  title: "AgriTechAi",
   description: "Predict which crop is best for your soil and environment",
 };
 
