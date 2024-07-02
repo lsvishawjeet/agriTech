@@ -90,7 +90,7 @@ function page() {
             <Navbar />
           </div>
           <div className="flex justify-center align-middle items-center h-auto bg-white">
-            <Suspense fallback={<p>Loading....</p>}>
+            <Suspense fallback={<p>Loading...</p>}>
               <div className={" p-5 w-[100%]"}>
                 <h1 className="text-3xl font-semibold mb-2">{predictedCrop}</h1>
                 <AIinsights />
