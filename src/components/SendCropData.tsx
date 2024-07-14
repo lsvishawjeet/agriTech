@@ -18,6 +18,7 @@ import axios, { AxiosError } from "axios";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast"
+import { backend_address } from "../../configurations/address";
 
 
 const formSchema = z.object({
@@ -59,7 +60,7 @@ const SendCropData = () => {
       
       const response = await axios({
         method: "post",
-        url: "https://agritechbackendflask.onrender.com/predict",
+        url: `${backend_address}/predict`,
         data: values,
       });
   
@@ -71,7 +72,7 @@ const SendCropData = () => {
       sessionStorage.setItem("enteredValues", JSON.stringify(values));
       sessionStorage.setItem(
         "graphURL",
-        `https://agritechbackendflask.onrender.com/${response.data.image_url}`
+        `${backend_address}/${response.data.image_url}`
       );
       router.push(`/home/predict/result`);
     } catch (error: any | AxiosError) {

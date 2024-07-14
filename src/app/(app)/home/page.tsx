@@ -3,6 +3,7 @@ import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
 import React, { useEffect } from "react";
 import axios, { AxiosError } from "axios";
+import { backend_address } from "../../../../configurations/address";
 
 function page() {
   useEffect(()=>{
@@ -10,7 +11,7 @@ function page() {
       try {
         const response = await axios({
           method: "get",
-          url: "https://agritechbackendflask.onrender.com/",
+          url: backend_address,
         });   
       } catch (error) {
         console.log(error)

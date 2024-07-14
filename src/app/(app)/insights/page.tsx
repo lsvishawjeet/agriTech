@@ -1,6 +1,7 @@
 import Main from "@/components/Main";
 import Navbar from "@/components/Navbar";
 import React from "react";
+import { backend_address } from "../../../../configurations/address";
 
 function page() {
   return (
@@ -30,117 +31,117 @@ function page() {
                 </span>
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/cropdistributiongraph`}
+              src={`${backend_address}/insights/cropdistributiongraph`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Apple`}
+              src={`${backend_address}/insights/Apple`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Banana`}
+              src={`${backend_address}/insights/Banana`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Blackgram`}
+              src={`${backend_address}/insights/Blackgram`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/ChickPea`}
+              src={`${backend_address}/insights/ChickPea`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Coconut`}
+              src={`${backend_address}/insights/Coconut`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Coffee`}
+              src={`${backend_address}/insights/Coffee`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Cotton`}
+              src={`${backend_address}/insights/Cotton`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Grapes`}
+              src={`${backend_address}/insights/Grapes`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Jute`}
+              src={`${backend_address}/insights/Jute`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/KidneyBeans`}
+              src={`${backend_address}/insights/KidneyBeans`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Lentil`}
+              src={`${backend_address}/insights/Lentil`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Maize`}
+              src={`${backend_address}/insights/Maize`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Mango`}
+              src={`${backend_address}/insights/Mango`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/MothBeans`}
+              src={`${backend_address}/insights/MothBeans`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/MungBeans`}
+              src={`${backend_address}/insights/MungBeans`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Muskmelon`}
+              src={`${backend_address}/insights/Muskmelon`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Orange`}
+              src={`${backend_address}/insights/Orange`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Papaya`}
+              src={`${backend_address}/insights/Papaya`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/PigeonPeas`}
+              src={`${backend_address}/insights/PigeonPeas`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Pomegranate`}
+              src={`${backend_address}/insights/Pomegranate`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Rice`}
+              src={`${backend_address}/insights/Rice`}
               alt={``}
             />
             <img
               className="rounded-xl bg-blend-multiply"
-              src={`https://agritechbackendflask.onrender.com/insights/Watermelon`}
+              src={`${backend_address}/insights/Watermelon`}
               alt={``}
             />
           </div>
